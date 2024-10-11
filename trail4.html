@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="trail4.css">
+    <script src="trail4.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="navbar">
+        <div class="icon">
+            <a href="#about"><i class='bx bx-user'></i></a>
+            <span class="tooltip">About Me</span>
+        </div>
+        <div class="icon">
+            <a href="#education"><i class='bx bx-book'></i></a>
+            <span class="tooltip">Education</span>
+        </div>
+        <div class="icon">
+            <a href="#skills"><i class='bx bx-code-alt'></i></a>
+            <span class="tooltip">Skills</span>
+        </div>
+        <div class="icon">
+            <a href="#activities"><i class='bx bxs-group'></i></a>
+            <span class="tooltip">Club Activities</span>
+        </div>
+        <div class="icon">
+            <a href="#projects"><i class='bx bx-folder-open'></i></a>
+            <span class="tooltip">Projects</span>
+        </div>
+        <div class="icon">
+            <a href="#achievements"><i class='bx bxs-trophy'></i></a>
+            <span class="tooltip">Achievements</span>
+        </div>
+        <div class="icon">
+            <a href="#contact"><i class='bx bx-envelope'></i></a>
+            <span class="tooltip">Contact</span>
+        </div>
+        <div class="icon">
+            <a href="#" id="download-btn"><i class='bx bx-download'></i></a>
+            <span class="tooltip">Download</span>
+        </div>
+        <div class="icon">
+            <a href="#" id="dark-mode-toggle"><i class='bx bx-moon'></i></a>
+            <span class="tooltip">Dark Mode</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1 id="greeting"></h1>
+            <img src="profile.jpeg" alt="Profile Picture" class="profile-pic">
+            <h2>Akella Akhila</h2>
+            <p>Welcome to my website!</p>
+            
+        </header>
+
+        <section id="about">
+            <h3>About Me</h3>
+            <p>Hi, I'm Akella Akhila. I'm a Sophomore in BTech Computer Science and Engineering at Indian Institute of Technology Indore. I'm a passionate coder mainly interested in Artificial Intelligence - Machine Learning, Software Development and Competitive Programming. I'm a part of various clubs in my institue. I enjoy reading books. I believe in hardwork and determination. </p>
+        </section>
+
+        <section id="education">
+            <h3>Education</h3>
+            <div class="education-entry">
+                <img src="logo1.png" alt="Institute Logo" class="education-logo">
+                <h4>Indian Institute of Technology Indore</h4>
+                <h5>BTech in CSE</h5>
+                <p>Grade: 8.85</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 89%;"></div>
+                </div>
+            </div>
+            <div class="education-entry">
+                <img src="logo2.png" alt="Institute Logo" class="education-logo">
+                <h4>Tirumala Educational Institutions</h4>
+                <h5>11th-12th</h5>
+                <p>Grade: 979/1000</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 97.9%;"></div>
+                </div>
+            </div>
+            <div class="education-entry">
+                <img src="logo3.jpeg" alt="Institute Logo" class="education-logo">
+                <h4>Sri Gowthami Smart School</h4>
+                <h5>Class 10</h5>
+                <p>Grade: 600/600</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 100%;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>C++</li>
+                <li>C</li>
+                <li>Python</li>
+                <li>MySQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Exploring AI-ML</li>
+                <li>Creative Writing</li>
+            </ul>
+        </section>
+
+        <section id="activities">
+            <h3>Activities</h3>
+            <ul>
+                <li>Alumni Cell</li>
+                <li>The Literary Club</li>
+                <li>AVANA(Social Welfare Club)</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h3>Projects</h3>
+            <div class="project" onclick="openPopup('Optimizes your code using personalised AI chatbot designed exclusively for coding. It can generate you code, debug and also elevate it! Use for optimizing, refining, and elevating any code in any language and in any IDE. ')">AI-Driven Code Optimizer</div>
+            <div class="project" onclick="openPopup('A chess learning-and-playing website along with database management for the website using SQL to store the details.')">Chess Database Management and Webste</div>
+            <div class="project" onclick="openPopup('A hands-on project involving a robot that follows a specified lined path, made using Arduino.')">Line Follower Robot</div>
+        </section>
+
+        <section id="achievements">
+            <h3>Achievements</h3>
+            <ul>
+                <li>JEE Advanced : 1970</li>
+                <li>JEE Main : 99.79 percentile</li>
+                <li>EAPCET : 326</li>
+                <li>Ransense 2024 at IITI: 1st position</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h3>Contact Me</h3>
+            <p>Email: <a href="mailto:cse230001005@iiti.ac.in">cse230001005@iiti.ac.in</a></p>
+            <form id="contact-form">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Akella Akhila. All rights reserved.</p>
+    </footer>
+
+    <div id="popup-modal" class="popup-modal">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <p id="popup-text"></p>
+        </div>
+    </div>
+</body>
+</html>
